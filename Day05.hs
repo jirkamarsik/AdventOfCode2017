@@ -1,6 +1,6 @@
 module Main where
 
-import ListZipper
+import ListZipperA
 import Data.Maybe (fromJust, isJust)
 
 type Tape = ListZipper Int

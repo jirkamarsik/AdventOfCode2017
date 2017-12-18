@@ -1,6 +1,6 @@
 module Main where
 
-import ListZipper
+import ListZipperA
 import qualified Data.Map.Strict as Map
 -- import qualified Data.Set as Set
 import Data.Maybe (fromJust)
@@ -12,7 +12,7 @@ advance mem = toList finalState
   where initialState = fromJust $ locate (maximum mem) mem
         toDivide = getCursor initialState
         cleanedState = updateCursor (const 0) initialState
-        finalState = iterate (updateCursor (+1) . shiftRight) cleanedState !! toDivide
+        finalState = iterate (updateCursor (+1) . fromJust . move 1) cleanedState !! toDivide
 
 -- firstRepeated :: Ord a => (a -> a) -> a -> Int
 -- firstRepeated f start = search series 0 Set.empty
