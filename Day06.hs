@@ -2,7 +2,7 @@ module Main where
 
 import ListZipperA
 import qualified Data.Map.Strict as Map
--- import qualified Data.Set as Set
+import qualified Data.Set as Set
 import Data.Maybe (fromJust)
 
 type Memory = [Int]

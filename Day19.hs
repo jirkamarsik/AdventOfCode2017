@@ -1,6 +1,6 @@
 module Main where
 
--- import Data.Char (isLetter)
+import Data.Char (isLetter)
 import Data.List (elemIndex)
 import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as M
