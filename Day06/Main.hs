@@ -32,5 +32,5 @@ loopLength f start = search series 0 Map.empty
 main :: IO ()
 main = do input <- getContents
           let mem = map read $ words input
-          print $ firstRepeated advance mem
-          -- print $ loopLength advance mem
+          -- print $ firstRepeated advance mem
+          print $ loopLength advance mem

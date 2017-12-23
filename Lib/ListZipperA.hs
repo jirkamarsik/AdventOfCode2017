@@ -14,7 +14,7 @@ move _ _                        = Nothing
 advanceC :: Int -> ListZipper a -> ListZipper a
 advanceC 0 lz               = lz
 advanceC d (LZ ls h (r:rs)) = advanceC (d - 1) (LZ (h:ls) r rs)
-advanceC d lz               = advanceC d       (resetCursor lz)
+advanceC d lz               = advanceC (d - 1) (resetCursor lz)
 
 getCursor :: ListZipper a -> a
 getCursor (LZ _ h _) = h
