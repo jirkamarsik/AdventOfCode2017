@@ -1,0 +1,110 @@
+name:                Advent-of-Code
+version:             0.1.0.0
+github:              "jirkamarsik/Advent-of-Code"
+license:             BSD3
+author:              "Jirka Marsik"
+maintainer:          "jiri.marsik89@gmail.com"
+copyright:           "Copyright (C) 2017-2017 Jiri Marsik"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+synopsis:            My Advent of Code 2017 solutions in Haskell
+category:            Exercises
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/jirkamarsik/Advent-of-Code#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- attoparsec
+- containers
+- lens
+- mtl
+- parsec
+- parsers
+- QuickCheck
+- text
+- trifecta
+
+library:
+  source-dirs: Lib
+
+_generic-executable: &generic-executable
+  main:         Main.hs
+  dependencies: [Advent-of-Code]
+  ghc-options:
+  - -threaded
+  - -rtsopts
+  - -with-rtsopts=-N
+
+executables:
+  Day01:
+    <<: *generic-executable
+    source-dirs: Day01
+  Day02:
+    <<: *generic-executable
+    source-dirs: Day02
+  Day03:
+    <<: *generic-executable
+    source-dirs: Day03
+  Day04:
+    <<: *generic-executable
+    source-dirs: Day04
+  Day05:
+    <<: *generic-executable
+    source-dirs: Day05
+  Day06:
+    <<: *generic-executable
+    source-dirs: Day06
+  Day07:
+    <<: *generic-executable
+    source-dirs: Day07
+  Day08:
+    <<: *generic-executable
+    source-dirs: Day08
+  Day09:
+    <<: *generic-executable
+    source-dirs: Day09
+  Day10:
+    <<: *generic-executable
+    source-dirs: Day10
+  Day11:
+    <<: *generic-executable
+    source-dirs: Day11
+  Day12:
+    <<: *generic-executable
+    source-dirs: Day12
+  Day13:
+    <<: *generic-executable
+    source-dirs: Day13
+  Day14:
+    <<: *generic-executable
+    source-dirs: Day14
+  Day15:
+    <<: *generic-executable
+    source-dirs: Day15
+  Day16:
+    <<: *generic-executable
+    source-dirs: Day16
+  Day17:
+    <<: *generic-executable
+    source-dirs: Day17
+  Day18:
+    <<: *generic-executable
+    source-dirs: Day18
+  Day19:
+    <<: *generic-executable
+    source-dirs: Day19
+  Day20:
+    <<: *generic-executable
+    source-dirs: Day20
+  Day21:
+    <<: *generic-executable
+    source-dirs: Day21
+  Day22:
+    <<: *generic-executable
+    source-dirs: Day22

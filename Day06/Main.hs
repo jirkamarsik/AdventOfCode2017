@@ -12,15 +12,15 @@ advance mem = toList finalState
   where initialState = fromJust $ locate (maximum mem) mem
         toDivide = getCursor initialState
         cleanedState = updateCursor (const 0) initialState
-        finalState = iterate (updateCursor (+1) . fromJust . move 1) cleanedState !! toDivide
+        finalState = iterate (updateCursor (+1) . advanceC 1) cleanedState !! toDivide
 
--- firstRepeated :: Ord a => (a -> a) -> a -> Int
--- firstRepeated f start = search series 0 Set.empty
---   where series = iterate f start
---         search (x:xs) i s = if x `Set.member` s then
---                               i
---                             else
---                               search xs (i + 1) (Set.insert x s)
+firstRepeated :: Ord a => (a -> a) -> a -> Int
+firstRepeated f start = search series 0 Set.empty
+  where series = iterate f start
+        search (x:xs) i s = if x `Set.member` s then
+                              i
+                            else
+                              search xs (i + 1) (Set.insert x s)
 
 loopLength :: Ord a => (a -> a) -> a -> Int
 loopLength f start = search series 0 Map.empty
@@ -32,4 +32,5 @@ loopLength f start = search series 0 Map.empty
 main :: IO ()
 main = do input <- getContents
           let mem = map read $ words input
-          print $ loopLength advance mem
+          print $ firstRepeated advance mem
+          -- print $ loopLength advance mem
