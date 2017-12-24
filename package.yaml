@@ -112,3 +112,6 @@ executables:
   Day23:
     <<: *generic-executable
     source-dirs: Day23
+  Day24:
+    <<: *generic-executable
+    source-dirs: Day24
