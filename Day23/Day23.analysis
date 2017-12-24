@@ -1,0 +1,13 @@
+b := 108100;
+c := 125100;
+h := 0;
+
+while (true) {
+  if (not (isPrime b)) {
+    h := h + 1;
+  }
+  if (b == c) {
+    return h;
+  }
+  b := b + 17;
+}
