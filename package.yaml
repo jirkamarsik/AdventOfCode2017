@@ -1,6 +1,6 @@
-name:                Advent-of-Code
+name:                AdventOfCode2017
 version:             0.1.0.0
-github:              "jirkamarsik/Advent-of-Code"
+github:              "jirkamarsik/AdventOfCode2017"
 license:             BSD3
 author:              "Jirka Marsik"
 maintainer:          "jiri.marsik89@gmail.com"
@@ -16,7 +16,7 @@ category:            Exercises
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on Github at <https://github.com/jirkamarsik/Advent-of-Code#readme>
+description:         Please see the README on Github at <https://github.com/jirkamarsik/AdventOfCode2017#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -36,7 +36,7 @@ library:
 
 _generic-executable: &generic-executable
   main:         Main.hs
-  dependencies: [Advent-of-Code]
+  dependencies: [AdventOfCode2017]
   ghc-options:
   - -threaded
   - -rtsopts

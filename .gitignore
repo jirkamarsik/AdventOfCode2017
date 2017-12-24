@@ -1,5 +1,5 @@
 .stack-work
-Advent-of-Code.cabal
+AdventOfCode2017.cabal
 *~
 *.prof
 *.hp
