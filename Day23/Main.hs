@@ -43,7 +43,7 @@ run prog env = exec (LZ [] prog) env
 
 optimisedProgramResult :: Int
 optimisedProgramResult = length $ filter (not . isPrime) series
-  where series = takeWhile (<= 81 * 100 + 100000 + 17000) $ iterate (+ 17) (81 * 100 + 100000)
+  where series = takeWhile (<= 125100) $ iterate (+ 17) 108100
         isPrime :: Int -> Bool
         isPrime n = null $ filter (\d -> n `mod` d == 0) $ takeWhile (\i -> i * i <= n) [2..n]
 

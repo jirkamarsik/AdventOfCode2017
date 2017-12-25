@@ -1,5 +1,6 @@
 module Main where
 
+import Data.Ord (Down(Down))
 import Data.Set (Set)
 import qualified Data.Set as Set
 import GHC.Exts (sortWith)
@@ -49,4 +50,4 @@ main = do input <- getContents
             Success componentList -> let components = Set.fromList $ componentList ++ map swap componentList
                                          bridges = allBridges 0 components in
                                      -- print $ maximum $ map bridgeStrength bridges
-                                     print $ bridgeStrength $ last $ sortWith length $ sortWith bridgeStrength bridges
+                                     print $ bridgeStrength $ head $ sortWith (\x -> Down (length x, bridgeStrength x)) bridges

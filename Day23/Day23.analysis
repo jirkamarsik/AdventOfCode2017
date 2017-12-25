@@ -1,13 +1,6 @@
-b := 108100;
-c := 125100;
-h := 0;
-
-while (true) {
-  if (not (isPrime b)) {
-    h := h + 1;
+h = 0;
+for (b = 108100; b <= 125100; b += 17) {
+  if (!(isPrime(b))) {
+    h++;
   }
-  if (b == c) {
-    return h;
-  }
-  b := b + 17;
 }
